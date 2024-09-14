@@ -1,0 +1,40 @@
+.parent-container {
+    display: flex;
+    width: 100%;
+}
+
+.img-container, .info-container {
+    flex: 1;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.img-container {
+    position: relative;
+    /* starts at 30% of parent container */
+    flex: 1 1 30%; 
+}
+
+.plantdiv, .odindiv {
+    position: absolute;
+}
+
+.odindiv {
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.img-container img:nth-child(2) {
+    width: 200px;
+    height: 200px;
+}
+
+.info-container {
+    /* starts at 70% of the parent container */
+    flex: 1 1 70%;
+}
