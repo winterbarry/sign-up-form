@@ -1,40 +1,120 @@
+/* REMOVE COMMENTS WHEN COMMITING */
+
 .parent-container {
-    display: flex;
-    width: 100%;
-}
-
-.img-container, .info-container {
-    flex: 1;
-}
-
-.img-container img {
-    width: 100%;
-    height: auto;
+    display: flex; /* Use flexbox layout for the parent container */
+    width: 100%; /* Ensure the container takes up the full width of the viewport */
 }
 
 .img-container {
-    position: relative;
-    /* starts at 30% of parent container */
-    flex: 1 1 30%; 
+    position: relative; /* Position elements inside img-container absolutely relative to it */
+    flex: 1 1 30%; /* Set the img-container to take up 30% of the parent container's width, while allowing it to grow/shrink */
 }
 
-.plantdiv, .odindiv {
-    position: absolute;
+.img-container img { 
+    width: 100%; /* Ensure the image fills its container's width */
+    height: auto; /* Maintain the image's aspect ratio */
 }
 
-.odindiv {
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -10%);
+.plantdiv, .darkbg {
+    position: absolute; /* Position the plant and odin images absolutely within the img-container */
 }
 
-.img-container img:nth-child(2) {
-    width: 200px;
-    height: 200px;
+.darkbg {
+    /* positioning */
+    display: flex; /* Use flexbox to control the alignment of inner content (if needed) */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    top: 100px; 
+
+    /* sizing and color */
+    width: 375px; 
+    height: 150px; 
+    background-color: hsla(0, 0%, 0%, 0.5); /* Keep the semi-transparent dark background */
+}
+
+.darkbg img {
+    width: 100px; /* Set a fixed width for the odin image */
+    height: 100px; /* Set a fixed height for the odin image */
+}
+
+.darkbg p {
+    color: white;
 }
 
 .info-container {
-    /* starts at 70% of the parent container */
-    flex: 1 1 70%;
+    flex: 1 1 70%; /* Set the info-container to take up 70% of the parent container's width, allowing it to grow/shrink */
+    display: flex;
+    flex-direction: column;
 }
+
+/* Style for the first set of input fields (First Name, Last Name) */
+.pair1 {
+    display: flex; /* Arranges label elements in a row */
+}
+
+.pair1 label {
+    display: flex; /* Makes the label a flex container */
+    flex-direction: column; /* Stacks the label text above the input field */
+}
+
+.pair1 label:nth-child(1) {
+    margin-right: 100px; /* Adds 100px space to the right of the first label */
+}
+
+.pair2 {
+    display: flex; /* Arranges label elements in a row */
+}
+
+.pair2 label {
+    display: flex; /* Makes the label a flex container */
+    flex-direction: column; /* Stacks the label text above the input field */
+}
+
+.pair2 label:nth-child(1) {
+    margin-right: 100px; /* Adds 100px space to the right of the first label */
+}
+
+.pair3 {
+    display: flex; /* Arranges label elements in a row */
+}
+
+.pair3 label {
+    display: flex; /* Makes the label a flex container */
+    flex-direction: column; /* Stacks the label text above the input field */
+    margin-bottom: 20px; /* Adds space between label and fieldset */
+}
+
+.pair3 label:nth-child(1) {
+    margin-right: 100px; /* Adds 100px space to the right of the first label */
+}
+
+.top-paragraph {
+    background-color: #F5F5F5;
+    padding: 75px 25px 25px;
+}
+
+.bottom-paragraph {
+    background-color: #F5F5F5;
+    padding: 25px 25px 45px;
+}
+
+/* fieldset {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+} */
+
+button {
+    background-color: #596D48;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.login-link {
+    color: #596D48;
+    text-decoration: none; /* Removes the underline */
+  }
+  
+.login-link:hover {
+    text-decoration: underline;
+  }
+  
