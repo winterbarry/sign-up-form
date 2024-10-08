@@ -1,40 +1,58 @@
-/* REMOVE COMMENTS WHEN COMMITING */
+@font-face {
+    font-family: 'norsebold';
+    src: url('NorseBold/norse-bold-webfont.woff2') format('woff2'),
+         url('NorseBold/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.odin p {
+    font-family: 'norsebold', sans-serif;
+    font-size: 60px;
+  }
 
 .parent-container {
-    display: flex; /* Use flexbox layout for the parent container */
-    width: 100%; /* Ensure the container takes up the full width of the viewport */
+    display: flex; 
+    width: 100%; 
 }
 
 .img-container {
-    position: relative; /* Position elements inside img-container absolutely relative to it */
-    flex: 1 1 30%; /* Set the img-container to take up 30% of the parent container's width, while allowing it to grow/shrink */
+    position: relative; 
+    flex: 1 1 30%; 
 }
 
 .img-container img { 
-    width: 100%; /* Ensure the image fills its container's width */
-    height: auto; /* Maintain the image's aspect ratio */
+    width: 100%; 
+    height: auto; 
+}
+
+.img-container .credits {
+    color: white;
+    position: absolute;
+    left: 75px;
+    bottom: 50px;
 }
 
 .plantdiv, .darkbg {
-    position: absolute; /* Position the plant and odin images absolutely within the img-container */
+    position: absolute; 
 }
 
 .darkbg {
     /* positioning */
-    display: flex; /* Use flexbox to control the alignment of inner content (if needed) */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     top: 100px; 
 
-    /* sizing and color */
+
     width: 375px; 
     height: 150px; 
-    background-color: hsla(0, 0%, 0%, 0.5); /* Keep the semi-transparent dark background */
+    background-color: hsla(0, 0%, 0%, 0.5); 
 }
 
 .darkbg img {
-    width: 100px; /* Set a fixed width for the odin image */
-    height: 100px; /* Set a fixed height for the odin image */
+    width: 100px; 
+    height: 100px; 
 }
 
 .darkbg p {
@@ -42,55 +60,88 @@
 }
 
 .info-container {
-    flex: 1 1 70%; /* Set the info-container to take up 70% of the parent container's width, allowing it to grow/shrink */
+    flex: 1 1 70%; 
     display: flex;
     flex-direction: column;
 }
 
-/* Style for the first set of input fields (First Name, Last Name) */
 .pair1 {
-    display: flex; /* Arranges label elements in a row */
+    display: flex; 
 }
 
 .pair1 label {
-    display: flex; /* Makes the label a flex container */
-    flex-direction: column; /* Stacks the label text above the input field */
+    display: flex; 
+    flex-direction: column; 
 }
 
 .pair1 label:nth-child(1) {
-    margin-right: 100px; /* Adds 100px space to the right of the first label */
+    margin-right: 100px; 
 }
 
+.pair1 input {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .pair1 input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
 .pair2 {
-    display: flex; /* Arranges label elements in a row */
+    display: flex; 
 }
 
 .pair2 label {
-    display: flex; /* Makes the label a flex container */
-    flex-direction: column; /* Stacks the label text above the input field */
+    display: flex; 
+    flex-direction: column; 
 }
 
 .pair2 label:nth-child(1) {
-    margin-right: 100px; /* Adds 100px space to the right of the first label */
+    margin-right: 100px; 
 }
 
+.pair2 input {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .pair2 input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+
 .pair3 {
-    display: flex; /* Arranges label elements in a row */
+    display: flex; 
 }
 
 .pair3 label {
-    display: flex; /* Makes the label a flex container */
-    flex-direction: column; /* Stacks the label text above the input field */
-    margin-bottom: 20px; /* Adds space between label and fieldset */
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 20px; 
 }
 
 .pair3 label:nth-child(1) {
-    margin-right: 100px; /* Adds 100px space to the right of the first label */
+    margin-right: 100px;
 }
+
+.pair3 input {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .pair3 input:focus {
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
 
 .top-paragraph {
     background-color: #F5F5F5;
     padding: 75px 25px 25px;
+}
+
+.top-paragraph p {
+    font-weight: bold;
 }
 
 .bottom-paragraph {
@@ -98,23 +149,33 @@
     padding: 25px 25px 45px;
 }
 
-/* fieldset {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-} */
+fieldset {
+    border: 2px solid white;
+}
 
-button {
+fieldset p {
+    font-weight: bold;
+}
+
+/* button style */
+#createAccountButton {
     background-color: #596D48;
     color: white;
     border-radius: 5px;
     padding: 10px;
+    border: #596D48;
 }
 
 .login-link {
     color: #596D48;
-    text-decoration: none; /* Removes the underline */
+    text-decoration: none; 
   }
   
 .login-link:hover {
     text-decoration: underline;
   }
-  
+
+/* validation and error handling */
+.error {
+    border: 2px solid red;
+}

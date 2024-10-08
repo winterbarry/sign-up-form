@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP FORM</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
     <div class="parent-container">
 
         <div class="img-container">
             <img src="halie-west-25xggax4bSA-unsplash.jpg" alt="plant image" class="plantdiv">
+
             <div class="darkbg">
                 <img src="odin-lined.png" alt="odin icon" class="odindiv">
                 <div class="odin">
                     <p>ODIN</p>
                 </div>
             </div>
+
+            <div class="credits">Photo by Halie West on Unsplash</div>
         </div>
         
         <div class="info-container">
@@ -25,50 +30,52 @@
                 <p>You <i>know</i> you want to</p>
             </div>
 
-            <fieldset>
-                <p>Let's do this!</p>
-        
-                <div class="pair1">
-                    <label for="firstName">FIRST NAME
-                        <input type="text" id="firstName" name="firstName">
-                    </label>
-                
-                    <label for="lastName">LAST NAME
-                        <input type="text" id="lastName" name="lastName">
-                    </label>
-                </div>
-                
+            <form id="myForm">
+                <fieldset>
+                    <p>Let's do this!</p>
 
-                <div class="pair2">
-                    <label for="email">EMAIL
-                        <input type="email" id="email" name="email">
-                    </label>
+                    <div class="pair1">
+                        <label for="firstName">FIRST NAME
+                            <input type="text" id="firstName" name="firstName">
+                        </label>
+                
+                        <label for="lastName">LAST NAME
+                            <input type="text" id="lastName" name="lastName">
+                        </label>
+                    </div>
+                
+                    <div class="pair2">
+                        <label for="email">EMAIL
+                            <input type="email" id="email" name="email">
+                        </label>
+                
+                        <label for="phoneNumber">PHONE NUMBER
+                            <input type="tel" id="phoneNumber" name="phoneNumber">
+                        </label>
+                    </div>
                     
-                    <label for="phone number">PHONE NUMBER
-                        <input type="tel" id="phone number" name="phone number">
-                    </label>
-                </div>
-        
-                <div class="pair3">
-                    <label for="password">PASSWORD
-                        <input type="text" id="password" name="password">
-                    </label>
-                    
-                    <label for="password">CONFIRM PASSWORD
-                        <input type="text" id="password" name="password">
-                    </label>
-                </div>
-        
-              </fieldset>
-        
+                    <div class="pair3">
+                        <label for="password">PASSWORD
+                            <input type="text" id="password" name="password">
+                        </label>
+                
+                        <label for="confirmPassword">CONFIRM PASSWORD
+                            <input type="password" id="confirmPassword" name="confirmPassword">
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+
             <div class="bottom-paragraph">
                 <div>
-                    <button>Create Account</button>
+                    <button type="submit" form="myForm" id="createAccountButton">Create Account</button>
                 </div>
                 
                 <p>Already have an account? <a href="#" class="login-link">Log in</a></p>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
